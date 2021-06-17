@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Main2 = () => {
+const TechnicalService = () => {
     return (
-        <div className="main">
+        <div className="main mt-5">
             <div className="row">
+                <div className="vertical"></div>
                 <div className="col-12 mt-5">
                     <span className="design">TECHNICAL SERVICES</span>
                 </div>
@@ -75,4 +76,4 @@ const Main2 = () => {
     );
 };
 
-export default Main2;
+export default TechnicalService;

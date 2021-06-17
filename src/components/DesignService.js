@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Main = () => {
+const DesignService = () => {
     return (
-      <div className="main">
+      <div className="main mt-5">
+          <div className="vertical"></div>
                   <div className="row">
                       <div className="col-12 mt-5">
                           <span className="design">DESIGN SERVICES</span>
@@ -69,10 +70,10 @@ const Main = () => {
              <h1>100 $</h1>
          </div>
      </div>
-          <h1 className="absolutH1">PRICES</h1>
+          {/*<h1 className="absolutH1">PRICES</h1>*/}
 
       </div>
     );
 };
 
-export default Main;
+export default DesignService;
