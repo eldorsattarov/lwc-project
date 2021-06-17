@@ -70,7 +70,7 @@ const TechnicalService = () => {
                     <h1>100 $</h1>
                 </div>
             </div>
-            <h1 className="absolutH2">PRICES</h1>
+            {/*<h1 className="absolutH2">PRICES</h1>*/}
 
         </div>
     );

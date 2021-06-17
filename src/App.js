@@ -9,16 +9,18 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Contact from "./components/Contact";
 function App() {
   return (
-      <BrowserRouter>
-        <Navbar/>
-    <Switch>
-      <Route path="/" exact component={Main}/>
-      <Route path="/about" exact component={About}/>
-      <Route path="/design" exact component={DesignService}/>
-      <Route path="/technical" exact component={TechnicalService}/>
-      <Route path="/contact" exact component={Contact}/>
-    </Switch>
-      </BrowserRouter>
+     <body id="body">
+     <BrowserRouter>
+       <Navbar/>
+       <Switch>
+         <Route path="/" exact component={Main}/>
+         <Route path="/about" exact component={About}/>
+         <Route path="/design" exact component={DesignService}/>
+         <Route path="/technical" exact component={TechnicalService}/>
+         <Route path="/contact" exact component={Contact}/>
+       </Switch>
+     </BrowserRouter>
+     </body>
   );
 }
 
