@@ -1,0 +1,22 @@
+
+.navbarTop{
+  background-color: #EAF2F6;
+}
+.loginPageOne{
+  background-color: #EAF2F6;
+}
+.loginPage{
+  .circle{
+    background-color: white;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
