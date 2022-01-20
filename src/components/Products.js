@@ -2,7 +2,7 @@ import React, {Component, useState, useEffect} from "react";
 import axios from 'axios';
 import {AvForm , AvField} from "availity-reactstrap-validation";
 import PaginationComponent from "./PaginationComponent";
-import {Label} from "reactstrap";
+import {Input, Label} from "reactstrap";
 
 class Pagination extends Component {
     state = {
@@ -36,19 +36,32 @@ class Pagination extends Component {
     }
 
 
+
+
     render() {
         const {data, totalRecords, limit} = this.state;
 
+        const Name = (value, field) => {
+
+            const data = {
+                field: field,
+                value: value
+            };
+            // props.Filter(data);
+
+        };
+        const FULL_NAME = "FULL_NAME";
         return (
             <div>
                 <div className="produc">
                     <div className="container">
                         <div className="row">
                             <div className="col-6 pl-0">
-                                <AvForm>
-                                    <AvField type="text" name="search" placeholder="search"/>
-                                </AvForm>
-                                <button type="button" className="btn btn-success">Search</button>
+                                {/*<AvForm>*/}
+                                    <Input type="text" name="search" placeholder="search"
+                                           onChange={e => Name(e.target.value , FULL_NAME)}/>
+                                {/*</AvForm>*/}
+                                <button type="button" className="btn btn-success mt-3">Search</button>
                             </div>
                         </div>
                     </div>

@@ -29,7 +29,7 @@ const Product = (props) => {
             console.log(props.products);
         })
         .catch(function (error) {
-            toast.error("Error");
+            // toast.error("Error");
         });
 
 
