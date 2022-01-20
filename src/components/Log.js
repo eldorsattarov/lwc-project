@@ -1,29 +1,35 @@
 import React from 'react';
-import {AvForm , AvField} from "availity-reactstrap-validation";
+import {AvForm, AvField} from "availity-reactstrap-validation";
 import {connect} from "react-redux";
-import {login2} from "../redux/actions/loginAction";
+import {login2, updateState} from "../redux/actions/loginAction";
 
 const Log = (props) => {
     return (
-        <div>
+        <div className="Autorization vh-100">
             <div className="container">
-                <div className="row vh-100 justify-content-center align-items-center">
-                    <div className="col-4">
-                        <div className="card">
-                            <div className="card-body">
-                                <AvForm onSubmit={(event, errors, values) => {props.login2(event, errors, values, props.history)}}>
-                                    <AvField type="text" name="_username"
-                                             label="username" required errorMessage="To'ldirish majburiy"/>
-                                    <AvField type="password" name="_password" label="Your password" required errorMessage="To'ldirish majburiy"/>
-                                    <button type="submit" className="btn btn-success btn-block">Sign in</button>
-                                </AvForm>
-                            </div>
-                        </div>
+                <div className="row">
+                    <div className="col-12 mt-5 text-center">
+                        <h4 className={`${props.subdomain !== "" ? "text-success font-weight-bold" : "text-danger font-weight-bold"}`}>{props.subdomain !== "" ? "Avtorizatsiyadan muaffaqiyatli o'tdingiz !" : "Avval avtorizatsiya qiling !"}</h4>
+                    </div>
+                </div>
+                <div className="row mt-5 justify-content-center align-items-center">
+                    <div className="col-12 text-center">
+                        <img src="./images/aaa.jpg" className="loginImg"/>
+                    </div>
+                    <div className="col-2 text-center mt-5">
+                        <a href={`https://${props.subdomain}.ox-sys.com/login`}
+                           className={`${props.subdomain !== "" ? "btn btn-success btn-block" : "btn btn-danger btn-block"}`}
+                           target="_blank">Login</a>
                     </div>
                 </div>
             </div>
         </div>
     );
 };
+const mapStateToProps = (state) => {
+    return {
+        subdomain: state.login.subdomain
+    }
+}
 
-export default connect(null,{login2})(Log);
+export default connect(mapStateToProps, {login2, updateState})(Log);

@@ -1,22 +1,69 @@
-
-.navbarTop{
+.navbarTop {
   background-color: #EAF2F6;
+  box-shadow: 0 0 7px 0 gray;
+  img{
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
 }
-.loginPageOne{
-  background-color: #EAF2F6;
-}
-.loginPage{
-  .circle{
+.loginPage {
+  .circle {
     background-color: white;
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
-  display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    img{
-      width: 200px;
-      height: 200px;
+    img {
+      width: 320px;
+      height: 320px;
     }
   }
+}
+.Menu {
+  margin: 30px 0;
+  img {
+    height: 500px;
+    width: 800px
+  }
+}
+.Login {
+  padding-top: 30px;
+}
+.produc{
+  margin-top: 60px;
+}
+
+.productScroll{
+  overflow-x: auto;
+  min-height: 80px;
+  height: 320px;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+.productss{
+  border: 1px solid #E5EBF7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 50px;
+}
+.paginationIndex{
+  padding: 20px 0;
+}
+.tablePagination{
+  width: 2600px;
+  tr:nth-child(0){
+
+  }
+  th{
+    width: 60px;
+  }
+  .mapTr{
+    font-size: 22px;
+  }
+}
+
+.productNew{
+  background-color: #EAF2F6;
+  padding:20px 0;
 }
